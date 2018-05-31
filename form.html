@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="save" content="history">
+    <title>Weekly job summary form @Coinchain Capital</title>
+</head>
+
+<body>
+
+    <h2>Weekly Job Summary Form</h2>
+
+    <table id="table" style="width:100%">
+
+      <form action="" method="post">
+        <tr>
+            <th style="width:5%">No.</th>
+            <th style="width:15%">Task Name</th>
+            <th>Description</th>
+            <th style="width:10%">Start Time</th>
+            <th style="width:10%">End Time</th>
+            <th style="width:5%">Total Hours</th>
+            <th style="width:5%">Percentage</th>
+        </tr>
+
+        <tr>
+            <th><input type="text" style="width:100%"></th>
+            <th><input type="text" style="width:100%"></th>
+            <th><input type="text" style="width:100%"></th>
+            <th><input type="text" style="width:100%"></th>
+            <th><input type="text" style="width:100%"></th>
+            <th><input type="text" style="width:100%"></th>
+            <th><input type="text" style="width:100%"></th>
+        </tr>
+
+        <div class="button1">
+          <button onclick="AddRow(); return false;">Add new row</button>
+        </div>
+
+        <div class="button2">
+          <button onclick="window.print(); return false;">Download pdf</button>
+        </div>
+
+      </form>
+
+    </table>
+
+  <script>
+
+    function AddRow() {
+        var table = document.getElementById("table");
+        var row = table.insertRow(-1);
+        var cell1 = row.insertCell(0);
+        var cell2 = row.insertCell(1);
+        var cell3 = row.insertCell(2);
+        var cell4 = row.insertCell(3);
+        var cell5 = row.insertCell(4);
+        var cell6 = row.insertCell(5);
+        var cell7 = row.insertCell(6);
+
+        cell1.innerHTML = "<input type=\"text\" style=\"width:100%\">";
+        cell2.innerHTML = "<input type=\"text\" style=\"width:100%\">";
+        cell3.innerHTML = "<input type=\"text\" style=\"width:100%\">";
+        cell4.innerHTML = "<input type=\"text\" style=\"width:100%\">";
+        cell5.innerHTML = "<input type=\"text\" style=\"width:100%\">";
+        cell6.innerHTML = "<input type=\"text\" style=\"width:100%\">";
+        cell7.innerHTML = "<input type=\"text\" style=\"width:100%\">";
+    }
+  </script>
+
+</body>
+</html>
+
+<style>
+  h2 {
+    text-align: center;
+  }
+  .button1 {
+    position: absolute;
+    bottom: 10%;
+    right: 5%;
+  }
+  .button2 {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+  }
+  input {
+    behavior:url(#default#savehistory)
+  }
+</style>
